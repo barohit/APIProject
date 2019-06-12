@@ -19,7 +19,7 @@
 		</tr>
 		<c:forEach var="f" items="${listFavorites}">
 		<tr>
-			<th><a class="btn btn-primary" href="${f.url}">${f.name}</a></th>
+			<th><a class="btn btn-primary" href="${f.url}">${f.eventname}</a></th>
 		</tr>
 		</c:forEach>
 	</table>
