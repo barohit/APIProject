@@ -32,7 +32,7 @@ public class EventContoller {
 		String url="https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey="+eventKey;
 		ResponseEntity<_Embedded> response = rt.exchange(url,HttpMethod.GET, new HttpEntity<>("paramters", headers), _Embedded.class);
 			
-		
+		System.out.println(response.getBody().getEvents());
 		return new ModelAndView("index","events", response.getBody());
 	}
 }

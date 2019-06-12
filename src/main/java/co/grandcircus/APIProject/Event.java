@@ -45,6 +45,12 @@ public class Event {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Event [type=" + type + ", id=" + id + ", name=" + name + "]";
 	} 
 	
 	
