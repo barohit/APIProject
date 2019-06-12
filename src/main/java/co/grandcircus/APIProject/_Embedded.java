@@ -2,6 +2,9 @@ package co.grandcircus.APIProject;
 
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class _Embedded {
 
 	ArrayList<Event> events;
