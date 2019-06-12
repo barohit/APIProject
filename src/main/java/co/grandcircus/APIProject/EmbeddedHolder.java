@@ -2,7 +2,7 @@ package co.grandcircus.APIProject;
 
 public class EmbeddedHolder {
 	
-	_Embedded embedded;
+	_Embedded _embedded;
 
 	public EmbeddedHolder() {
 		super();
@@ -11,15 +11,15 @@ public class EmbeddedHolder {
 
 	public EmbeddedHolder(_Embedded embedded) {
 		super();
-		this.embedded = embedded;
+		this._embedded = embedded;
 	}
 
 	public _Embedded getEmbedded() {
-		return embedded;
+		return _embedded;
 	}
 
 	public void setEmbedded(_Embedded embedded) {
-		this.embedded = embedded;
+		this._embedded = embedded;
 	} 
 	
 	
