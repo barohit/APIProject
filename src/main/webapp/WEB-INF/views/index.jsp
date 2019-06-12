@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${events.events[0].type}
+${events}
 </body>
 </html>
