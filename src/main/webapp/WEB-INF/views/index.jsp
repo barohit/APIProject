@@ -26,12 +26,9 @@
 			<td> <form action="favorite">
 			<input type="hidden" name="name" value="${e.name}">
 			<input type="hidden" name="url" value="${e.url}">
-<<<<<<< HEAD
 			<input type="hidden" name="id" value="${e.id}">
-			<input type="submit" value="Add">
-=======
 			<input class="btn btn-primary" type="submit" value="Add">
->>>>>>> f562595ac7d74904a155fa31fba8d7a297d75c05
+
 			</form> </td>
 		</tr>
 		</c:forEach>
