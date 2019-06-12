@@ -52,7 +52,7 @@ public class EventContoller {
 	@RequestMapping("seefavorites")
 	public ModelAndView getFavorites() {
 		
-		return new ModelAndView("favorties","listFavorites", fr.findAll());
+		return new ModelAndView("favorites","listFavorites", fr.findAll());
 	}
 	
 }

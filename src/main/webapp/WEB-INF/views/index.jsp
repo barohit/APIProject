@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-	<a href="seefavorites">Check your favorites</a><br />
+	<a class="btn btn-primary" href="seefavorites">Check your favorites</a><br />
 	<br />
 	<table class="table">
 		<tr>
@@ -27,7 +26,7 @@
 			<td> <form action="favorite">
 			<input type="hidden" name="name" value="${e.name}">
 			<input type="hidden" name="url" value="${e.url}">
-			<input type="submit" value="Add">
+			<input class="btn btn-primary" type="submit" value="Add">
 			</form> </td>
 		</tr>
 		</c:forEach>
