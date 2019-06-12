@@ -8,16 +8,18 @@ public class Event {
 	String type;
 	String id; 
 	String name;
+	String url;
 	
 	public Event() {
 		super();
 	}
 
-	public Event(String type, String id, String name) {
+	public Event(String type, String id, String name, String url) {
 		super();
 		this.type = type;
 		this.id = id;
 		this.name = name;
+		this.url = url;
 	}
 
 	public String getType() {
@@ -44,10 +46,18 @@ public class Event {
 		this.name = name;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	@Override
 	public String toString() {
-		return "Event [type=" + type + ", id=" + id + ", name=" + name + "]";
-	} 
-	
+		return "Event [type=" + type + ", id=" + id + ", name=" + name + ", url=" + url + "]";
+	}
+
 	
 }
