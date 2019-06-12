@@ -16,12 +16,10 @@
 	<table class="table">
 		<tr>
 			<th>Event Name </th>
-			<th> URL </th>
 		</tr>
 		<c:forEach var="f" items="${listFavorites}">
 		<tr>
-			<td> ${f.name } </td>
-			<td>${f.url}</td>
+			<th><a class="btn btn-primary" href="${f.url}">${f.name}</a></th>
 		</tr>
 		</c:forEach>
 	</table>
