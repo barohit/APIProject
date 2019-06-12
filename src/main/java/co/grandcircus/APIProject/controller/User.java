@@ -12,19 +12,29 @@ public class User {
 	
 	String eventname; 
 	String url; 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	Integer userid;
-	
+	@Id
+	String eventid;
+
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public User(String eventname, String url) {
+	public User(String eventname, String url, String eventid) {
 		super();
 		this.eventname = eventname;
 		this.url = url;
+		this.eventid = eventid;
+	}
+	
+	public String getEventid() {
+		return eventid;
+	}
+
+	public void setEventid(String eventid) {
+		this.eventid = eventid;
 	}
 	
 	public User(String eventname, String url, Integer userid) {

@@ -43,9 +43,9 @@ public class EventContoller {
 	}
 	
 	@RequestMapping("favorite")
-	public ModelAndView favorite(@RequestParam("name") String name, @RequestParam("url") String url) {
+	public ModelAndView favorite(@RequestParam("name") String name, @RequestParam("url") String url, @RequestParam("id") String id) {
 		
-		fr.save(new User(name, url));
+		fr.save(new User(name, url, id));
 		return new ModelAndView("redirect:/");
 	}
 	

@@ -27,6 +27,7 @@
 			<td> <form action="favorite">
 			<input type="hidden" name="name" value="${e.name}">
 			<input type="hidden" name="url" value="${e.url}">
+			<input type="hidden" name="id" value="${e.id}">
 			<input type="submit" value="Add">
 			</form> </td>
 		</tr>
