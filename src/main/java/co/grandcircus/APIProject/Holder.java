@@ -5,16 +5,15 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class _Embedded {
+public class Holder {
 
 	ArrayList<Event> events;
 
-	public _Embedded() {
+	public Holder() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public _Embedded(ArrayList<Event> events) {
+	public Holder(ArrayList<Event> events) {
 		super();
 		this.events = events;
 	}
@@ -25,11 +24,12 @@ public class _Embedded {
 
 	public void setEvents(ArrayList<Event> events) {
 		this.events = events;
-	} 
-	
+	}
+
 	@Override
 	public String toString() {
-		return "_Embedded [events=" + events + "]";
+		return "Holder [events=" + events + "]";
 	}
+	
 	
 }

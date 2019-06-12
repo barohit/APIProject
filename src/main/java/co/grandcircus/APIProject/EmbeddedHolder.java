@@ -1,26 +1,28 @@
 package co.grandcircus.APIProject;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class EmbeddedHolder {
 	
-	_Embedded _embedded;
+	Holder _embedded;
 
 	public EmbeddedHolder() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public EmbeddedHolder(_Embedded embedded) {
+	public EmbeddedHolder(Holder _embedded) {
 		super();
-		this._embedded = embedded;
+		this._embedded = _embedded;
 	}
 
-	public _Embedded getEmbedded() {
+	public Holder get_embedded() {
 		return _embedded;
 	}
 
-	public void setEmbedded(_Embedded embedded) {
-		this._embedded = embedded;
-	} 
+	public void set_embedded(Holder _embedded) {
+		this._embedded = _embedded;
+	}
 	
 	
 
