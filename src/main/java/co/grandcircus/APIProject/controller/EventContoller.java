@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import co.grandcircus.APIProject._Embedded;
+
 @Controller
 public class EventContoller {
 
@@ -28,9 +30,7 @@ public class EventContoller {
 		
 		
 		String url="https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey="+eventKey;
-		ResponseEntity<_Enbaded> response = rt.exchange(url,HttpMethod.GET, new HttpEntity<>("paramters", headers), _Enbaded.class);
-		
-		
+		ResponseEntity<_Embedded> response = rt.exchange(url,HttpMethod.GET, new HttpEntity<>("paramters", headers), _Embedded.class);
 		return new ModelAndView("index");
 	}
 }
