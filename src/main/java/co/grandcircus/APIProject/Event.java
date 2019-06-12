@@ -1,5 +1,8 @@
 package co.grandcircus.APIProject;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Event {
 
 	String type;
