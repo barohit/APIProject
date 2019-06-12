@@ -35,6 +35,6 @@ public class EventContoller {
 		ResponseEntity<EmbeddedHolder> response = rt.exchange(url,HttpMethod.GET, new HttpEntity<>("paramters", headers), EmbeddedHolder.class);
 			
 		System.out.println(response.getBody().get_embedded().getEvents());
-		return new ModelAndView("index","events", response.getBody());
+		return new ModelAndView("index","events", response.getBody().get_embedded().getEvents());
 	}
 }
