@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-	<input class="btn btn-primary" type="submit" value="Check your favorite"><br />
+	<a href="seefavorites">Check your favorites</a><br />
 	<br />
 	<table class="table">
 		<tr>

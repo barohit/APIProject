@@ -15,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.APIProject.EmbeddedHolder;
-import co.grandcircus.APIProject.Event;
 
 
 @Controller
@@ -49,4 +48,11 @@ public class EventContoller {
 		fr.save(new User(name, url));
 		return new ModelAndView("redirect:/");
 	}
+	
+	@RequestMapping("seefavorites")
+	public ModelAndView getFavorites() {
+		
+		return new ModelAndView("favorties","listFavorites", fr.findAll());
+	}
+	
 }
