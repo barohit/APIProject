@@ -24,8 +24,11 @@
 		<tr>
 			<td><a href="${e.url}">${e.name }</a></td>
 			<td> ${e.type } </td>
-			<td><a class="btn btn-primary" href="favorite?id=${e.id}">Add</a></td>
-			
+			<td> <form action="favorite">
+			<input type="hidden" name="name" value="${e.name}">
+			<input type="hidden" name="url" value="${e.url}">
+			<input type="submit" value="Add">
+			</form> </td>
 		</tr>
 		</c:forEach>
 	</table>

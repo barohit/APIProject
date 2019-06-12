@@ -1,6 +1,7 @@
 package co.grandcircus.APIProject.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.APIProject.EmbeddedHolder;
+import co.grandcircus.APIProject.Event;
 
 
 @Controller
@@ -21,6 +23,9 @@ public class EventContoller {
 
 	@Value("${events.key}")
 	String eventKey;
+	
+	@Autowired
+	FavoriteRepository fr;
 	
 	RestTemplate rt = new RestTemplate();
 	
@@ -39,9 +44,9 @@ public class EventContoller {
 	}
 	
 	@RequestMapping("favorite")
-	public ModelAndView favorite(@RequestParam("id") String id) {
+	public ModelAndView favorite(@RequestParam("name") String name, @RequestParam("url") String url) {
 		
-		// logic to add id to favorites for later retrieval based on user id
+		fr.save(new User(name, url));
 		return new ModelAndView("redirect:/");
 	}
 }
