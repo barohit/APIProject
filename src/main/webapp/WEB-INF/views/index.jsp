@@ -22,9 +22,10 @@
 		</tr>
 		<c:forEach var="e" items="${events}">
 		<tr>
-			<td> ${e.name } </td>
+			<td><a href="${e.url}">${e.name }</a></td>
 			<td> ${e.type } </td>
-			<td><a class="btn btn-primary" href="favorite?url=${e.id}">Add</a></td>
+			<td><a class="btn btn-primary" href="favorite?id=${e.id}">Add</a></td>
+			
 		</tr>
 		</c:forEach>
 	</table>
