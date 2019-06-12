@@ -38,15 +38,10 @@ public class EventContoller {
 		return new ModelAndView("index","events", response.getBody().get_embedded().getEvents());
 	}
 	
-	@RequestMapping("site")
-	public ModelAndView favorite(@RequestParam("url") String url) {
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("x-api-key", eventKey);
-		headers.add("Accept",MediaType.APPLICATION_JSON_VALUE);
+	@RequestMapping("favorite")
+	public ModelAndView favorite(@RequestParam("id") String id) {
 		
-		
-		//String url="https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey="+eventKey;
-		ResponseEntity<EmbeddedHolder> response = rt.exchange(url,HttpMethod.GET, new HttpEntity<>("paramters", headers), EmbeddedHolder.class);
+		// logic to add id to favorites for later retrieval based on user id
 		return new ModelAndView("redirect:/");
 	}
 }
