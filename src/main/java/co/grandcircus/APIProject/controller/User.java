@@ -12,7 +12,7 @@ public class User {
 	
 	String eventname; 
 	String url; 
-	Integer userid;
+	String userid;
 	@Id
 	String eventid;
 
@@ -22,11 +22,12 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public User(String eventname, String url, String eventid) {
+	public User(String eventname, String url, String eventid, String userid) {
 		super();
 		this.eventname = eventname;
 		this.url = url;
 		this.eventid = eventid;
+		this.userid = userid; 
 	}
 	
 	public String getEventid() {
@@ -37,7 +38,7 @@ public class User {
 		this.eventid = eventid;
 	}
 	
-	public User(String eventname, String url, Integer userid) {
+	public User(String eventname, String url, String userid) {
 		super();
 		this.eventname = eventname;
 		this.url = url;
@@ -60,11 +61,11 @@ public class User {
 		this.url = url;
 	}
 	
-	public Integer getUserid() {
+	public String getUserid() {
 		return userid;
 	}
 	
-	public void setUserid(Integer userid) {
+	public void setUserid(String userid) {
 		this.userid = userid;
 	} 
 	

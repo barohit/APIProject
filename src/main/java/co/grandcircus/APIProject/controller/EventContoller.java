@@ -1,6 +1,8 @@
 package co.grandcircus.APIProject.controller;
 
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -43,9 +45,9 @@ public class EventContoller {
 	}
 	
 	@RequestMapping("favorite")
-	public ModelAndView favorite(@RequestParam("name") String name, @RequestParam("url") String url, @RequestParam("id") String id) {
-		
-		fr.save(new User(name, url, id));
+	public ModelAndView favorite(HttpSession session, @RequestParam("name") String name, @RequestParam("url") String url, @RequestParam("id") String id) {
+		String sessionid = session.getId(); 
+		fr.save(new User(name, url, id, sessionid));
 		return new ModelAndView("redirect:/");
 	}
 	
